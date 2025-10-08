@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>InteliCorp | Inovação com IA</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: "Poppins", sans-serif; }
+    body { background: #f9f9f9; color: #333; scroll-behavior: smooth; }
+    header {
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      padding: 20px 40px;
+      position: fixed;
+      width: 100%;
+      top: 0; left: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 10;
+    }
+    header h1 { color: #0066cc; font-weight: 600; }
+    nav a {
+      text-decoration: none;
+      color: #0008ff;
+      margin-left: 25px;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    nav a:hover { color: #0066cc; }
+
+    section { padding: 100px 10%; }
+
+    .hero {
+    background: url('https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1600&q=80') no-repeat center/cover;
+    color: #ffffff;
+    text-align: center;
+    padding: 200px 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .hero h2 {
+    font-size: 3rem; /* Aumentado */
+    font-family: 'Roboto Slab', serif; /* Fonte serifada para título */
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.6); /* Melhor contraste */
+  }
+  .hero p {
+    font-size: 1.5rem; /* Aumentado */
+    font-family: 'Open Sans', sans-serif; /* Fonte diferente do título */
+    max-width: 700px;
+    line-height: 1.8;
+    text-shadow: 1px 1px 6px rgba(0,0,0,0.6); /* Melhor legibilidade */
+}
+
+    .section-box {
+      background: #fff;
+      padding: 60px;
+      border-radius: 16px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+      margin-bottom: 80px;
+      animation: fadeIn 1s ease-in;
+    }
+
+    @keyframes fadeIn { from {opacity: 0; transform: translateY(10px);} to {opacity: 1; transform: translateY(0);} }
+
+    h2 { color: #0066cc; margin-bottom: 15px; }
+    p { line-height: 1.6; margin-bottom: 15px; }
+
+    .projetos-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+    .card {
+      background: #f0f4f8;
+      padding: 25px;
+      border-radius: 12px;
+      transition: transform 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+    .card:hover { transform: scale(1.03); }
+    .card img { width: 100%; border-radius: 10px; margin-bottom: 15px; }
+
+    .depoimentos {
+      background: linear-gradient(135deg, #0066cc, #004b99);
+      color: #fff;
+      text-align: center;
+    }
+    .depoimentos h2 { color: #fff; }
+    .depoimento {
+      max-width: 700px;
+      margin: 40px auto;
+      background: rgba(255,255,255,0.1);
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    .depoimento strong { color: #00d4ff; }
+
+    .cta {
+      background: url('https://images.unsplash.com/photo-1485217988980-11786ced9454?auto=format&fit=crop&w=1600&q=80') no-repeat center/cover;
+      color: #fff;
+      text-align: center;
+    }
+    .cta h2 { color: #fff; }
+    .cta form input, .cta form textarea {
+      border: none;
+      border-radius: 8px;
+      margin: 8px;
+      padding: 12px;
+      width: 90%;
+    }
+    .cta button {
+      background: #0066cc;
+      border: none;
+      color: #fff;
+      padding: 12px 30px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .cta button:hover { background: #004b99; }
+
+    .chatbot {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #0066cc;
+      color: #fff;
+      padding: 15px 25px;
+      border-radius: 25px;
+      cursor: pointer;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(0,102,204,0.5); }
+      70% { box-shadow: 0 0 0 15px rgba(0,102,204,0); }
+      100% { box-shadow: 0 0 0 0 rgba(0,102,204,0); }
+    }
+
+    footer {
+      background: #111;
+      color: #fff;
+      text-align: center;
+      padding: 30px;
+    }
+    footer a { color: #00aaff; text-decoration: none; margin: 0 10px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>InteliCorp</h1>
+    <nav>
+      <a href="#sobre">Sobre</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#como">Como Trabalhamos</a>
+      <a href="#depoimentos">Depoimentos</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Transformamos Inteligência em Resultado</h2>
+    <p>Na InteliCorp, unimos IA, automação e design inteligente para impulsionar o crescimento e eficiência das empresas modernas.</p>
+  </section>
+
+  <section id="sobre" class="section-box">
+    <h2>Sobre a Empresa</h2>
+    <p>
+      A <strong>InteliCorp</strong> é uma empresa de tecnologia focada em soluções de inteligência artificial e automação para negócios. 
+      Nosso objetivo é simplificar processos complexos e gerar valor por meio da inovação digital.
+    </p>
+  </section>
+
+  <section id="projetos" class="section-box">
+    <h2>Projetos em Destaque</h2>
+    <div class="projetos-cards">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80" alt="IA Logística">
+        <h3>IA Predictiva para Logística</h3>
+        <p><strong>Desafio:</strong> Rotas longas e custos elevados no transporte de mercadorias.</p>
+        <p><strong>Solução:</strong> Desenvolvemos um modelo de machine learning que analisa padrões e prevê rotas otimizadas em tempo real.</p>
+        <p><strong>Resultado:</strong> Redução de 25% nos custos e entregas 40% mais rápidas.</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1581090700227-1e37b190418e?auto=format&fit=crop&w=800&q=80" alt="Chatbot">
+        <h3>Chatbot de Atendimento</h3>
+        <p><strong>Desafio:</strong> Atendimento lento e alto volume de tickets repetitivos.</p>
+        <p><strong>Solução:</strong> Criamos um chatbot com IA treinado em base de conhecimento interna.</p>
+        <p><strong>Resultado:</strong> 70% das dúvidas resolvidas automaticamente e aumento de 30% na satisfação do cliente.</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80" alt="Dashboard">
+        <h3>Painel Inteligente de Insights</h3>
+        <p><strong>Desafio:</strong> Dificuldade em interpretar relatórios e métricas.</p>
+        <p><strong>Solução:</strong> Criamos um dashboard com IA que traduz dados complexos em insights práticos e visualizações automáticas.</p>
+        <p><strong>Resultado:</strong> Tomada de decisão 3x mais rápida e aumento de 20% na eficiência operacional.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="como" class="section-box">
+    <h2>Como Trabalhamos</h2>
+    <p>Nosso método é orientado por dados e centrado em resultados. Unimos análise estratégica, design de experiência e engenharia de IA para entregar soluções sob medida.</p>
+    <p>Integramos ferramentas como <strong>Zapier</strong>, <strong>Google Sheets</strong> e <strong>Notion</strong>, criando fluxos automatizados que conectam todas as áreas da empresa.</p>
+  </section>
+
+  <section id="depoimentos" class="depoimentos">
+    <h2>Depoimentos de Clientes</h2>
+    <div class="depoimento">
+      <p><em>"Após nossa primeira automação com a InteliCorp, minha empresa ganhou tempo e clareza. A produtividade cresceu 2x e o suporte é surreal!"</em></p>
+      <strong>— DevClub, CEO Rodolfo Mori</strong>
+    </div>
+    <div class="depoimento">
+      <p><em>"Antes gastávamos horas em tarefas manuais. Agora, tudo é automatizado e os relatórios chegam prontos toda manhã. Incrível!"</em></p>
+      <strong>— InovaData Analytics</strong>
+    </div>
+    <div class="depoimento">
+      <p><em>"A integração entre IA e atendimento transformou a experiência dos nossos clientes. Vendas subiram 40% em apenas 2 meses."</em></p>
+      <strong>— StartWay Tecnologia</strong>
+    </div>
+  </section>
+
+  <section id="contato" class="cta">
+    <h2>Solicite uma Proposta</h2>
+    <p>Preencha o formulário e receba uma proposta personalizada para seu negócio.</p>
+    <form onsubmit="simularEnvio(event)">
+      <input type="text" id="nome" placeholder="Seu nome" required>
+      <input type="email" id="email" placeholder="Seu e-mail" required>
+      <textarea id="mensagem" placeholder="Descreva sua necessidade..." required></textarea><br>
+      <button type="submit">Enviar</button>
+    </form>
+    <p id="respostaForm" style="color:#00d4ff; margin-top:10px;"></p>
+  </section>
+
+  <footer>
+    <p>© 2025 InteliCorp - Inovação com Inteligência</p>
+    <p>
+      <a href="#">LinkedIn</a> |
+      <a href="#">GitHub</a> |
+      <a href="#">Contato</a>
+    </p>
+  </footer>
+
+  <div class="chatbot" onclick="abrirChat()">💬 Fale com o Assistente</div>
+
+  <script>
+    function simularEnvio(event){
+      event.preventDefault();
+      document.getElementById("respostaForm").textContent = "✅ Sua mensagem foi registrada! Nossa equipe entrará em contato em breve.";
+    }
+
+    function abrirChat(){
+      alert("Olá! 👋 Sou o assistente virtual da InteliCorp. Como posso ajudar você hoje?");
+    }
+  </script>
+</body>
+</html>
