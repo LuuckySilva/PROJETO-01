@@ -1,37 +1,43 @@
-🧠 Descrição breve do projeto
+# InteliCorp — Site Corporativo Inteligente (versão 1.0)
 
-Projeto 01 – Site Inteligente Corporativo
-Este projeto apresenta um modelo de site moderno, limpo e interativo, criado com foco em empresas que desejam demonstrar seus projetos e diferenciais utilizando Inteligência Artificial e automações web.
-O site inclui seções corporativas completas, chatbot simulado e elementos dinâmicos que tornam a experiência do usuário fluida e envolvente.
+Site corporativo demonstrando integrações e automações com IA.
 
-⚙️ Tecnologias utilizadas
+🔗 Demo: # InteliCorp — Site Corporativo Inteligente (versão 1.0)
 
-HTML5 — estrutura semântica e responsiva
+Site corporativo demonstrando integrações e automações com IA.
 
-CSS3 — design minimalista com animações suaves
+🔗 Demo: https://luuckysilva.github.io/intelicorp-landing/
+📁 Repositório: https://github.com/LuuckySilva/intelicorp-landing
 
-JavaScript (Vanilla) — interatividade e simulação de IA
+## Sobre
+Este projeto é uma landing corporativa que mostra como pequenas automações e prompts podem melhorar UX e captar leads. Inclui um chatbot simulado, formulário automatizado (simulado) e seções de storytelling.
 
-Prompt Engineering — lógica de IA aplicada à experiência do usuário
+## Tecnologias
+- HTML5 (semântico)
+- CSS3 (responsivo)
+- JavaScript (Vanilla)
+- Conceitos de Prompt Engineering (simulação)
 
-Git & GitHub — versionamento e documentação do projeto
+## Como testar localmente
+1. Clone: `git clone https://github.com/LuuckySilva/intelicorp-landing`
+2. Abra `index.html` no seu navegador (ou rode um servidor estático: `npx http-server`).
 
-🖼️ Prints do resultado
-
-### Prints do Resultado
+## Screenshots
 
 ![Home Page](./assets/home.png)
-![Seção Projetos](./assets/projetos.png)
-![Chatbot Simulado](./assets/chatbot.png)
-![Depoimentos](./assets/depoimentos.png)
+![Chatbot](./assets/chatbot.png)
 
-🚀 Status do projeto
+## Funcionalidades
+- Layout responsivo
+- Chatbot simulado (JS)
+- Formulário com simulação de envio
 
-✅ Concluído – Versão 1.0
-🔄 Futuras melhorias:
+## Próximos passos
+- Integração real com API de chatbot
+- Converter para React para maior escalabilidade
+- Formulário com Google Sheets / backend
 
-Integração real de chatbot com API
+## Autor
+Lucas Silva — Front-End & IA em evolução  
+Contato: lukasantonyo@gmail.com
 
-Formulário automatizado com Google Sheets
-
-Versão em React para maior escalabilidade
